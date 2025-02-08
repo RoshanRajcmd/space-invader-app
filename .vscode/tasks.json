@@ -1,0 +1,51 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-std=c++17",
+                "-I/Users/roshanraj-mac/Documents/cpp_libraries/SFML-3.0.0/include",
+                "-L/Users/roshanraj-mac/Documents/cpp_libraries/SFML-3.0.0/lib",
+                "-lsfml-graphics",
+                "-lsfml-window",
+                "-lsfml-system",
+                "main.cpp",
+                "-o",
+                "main"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "options": {
+                "env": {
+                    "DYLD_LIBRARY_PATH": "/Users/roshanraj-mac/Documents/cpp_libraries/SFML-3.0.0/lib"
+                }
+            }
+        },
+        {
+            "label": "sign",
+            "type": "shell",
+            "command": "codesign",
+            "args": [
+                "--deep",
+                "--force",
+                "--verbose",
+                "--sign",
+                "-",
+                "./main"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "dependsOn": "build"
+        }
+    ]
+}
