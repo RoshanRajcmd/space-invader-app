@@ -1,8 +1,10 @@
 # Space Invader Game
 
-The famous 90's game - Space Invader using C++ framework SFML.
+The famous 90's game - Space Invader uses the C++ framework SFML.
 
 ## ⚙️ Source Code
+
+`This is a WIP project and not yet completed`
 
 [space-invader-app](https://github.com/RoshanRajcmd/space-invader-app)
 
