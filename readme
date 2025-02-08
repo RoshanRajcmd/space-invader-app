@@ -23,6 +23,8 @@ The famous 90's game - Space Invader using C++ framework SFML.
 
 ## 🧑‍💻 Developer setup
 
+Have the .vscode file and its contents, you need them.
+
 Running commands:
 cd "/path/to/project" && g++ -c main.cpp -I/path/to/SFML/include
 
